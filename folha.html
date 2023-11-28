@@ -1,0 +1,314 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      
+
+
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link rel="stylesheet" href="style.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+      <title>&#128176;   SIMULADOR IRRF   &#128176;</title>
+
+    </head>
+    <!DOCTYPE html>
+    <html>
+    
+    
+    <body>
+      <div class="background-image"></div>
+
+
+
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
+        <div class="container">
+          <a class="navbar-brand py-1 " href="#">
+            <img src="outros/img/lion2.gif" alt="..." height="50
+            ">
+          </a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link active btn btn-primary px-3 py-1" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown  px-5">
+                <a class="nav-link dropdown-toggle active btn btn-primary  px-3 py-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Links Úteis
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Receita Federal</a></li>
+                  <li><a class="dropdown-item" href="#">Previdência Social</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="https://www27.receita.fazenda.gov.br/simulador-irpf/" target="_blank">Simulação de Alíquota Efetiva</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary px-3 py-1" data-bs-toggle="modal" data-bs-target="#chamaModal">
+                  About
+                </a>                
+              </li>
+      
+            </ul>
+          </div>
+        </div>
+        
+      </nav>
+
+      <!-- Modal -->
+      <div class="modal fade" id="chamaModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="outros/img/ifpr.png" alt=""><BR>
+
+              <h1 class="modal-title fs-5" id="exampleModalLabel"><B>Trabalho de Programação WEB 2023</B></h1>
+              <B>
+              </B></h1>
+              <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            
+            <div class="estilomodal modal-body">
+              <b>Prof.: Fernando de Lima Alves</b>
+              <br><br>
+              Este é um exercício para criação de um site dinâmico.
+              <br>
+              Deve ser entregue o link do GitHub e do GitHubPages.
+              <BR>
+              O link do template utilizado deve estar no README.
+              <BR>
+              Atividade individual.
+              <BR>
+              Apresentações do site final de 10 a 15 minutos nos dias 5 e 12 de dezembro de 2023. 
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FINAL MODAL-->
+
+
+              
+
+
+
+
+
+
+
+
+
+  
+        <div class="container">
+            <div class="coluna-esquerda">
+
+              <form>              
+                  <form>
+                    <div>
+                    <h1 class="titulodapagina">CALCULO DE IRRF</h1><BR>
+                  </div>
+              
+                  <div>
+                    <p class="TEXTO-left"> Rendimentos Tributáveis.</p>
+                    <input type="text" id="rendimentos" placeholder="Rendimentos" class="form-control-sm" ><span title="Neste Campo digite o valor Total do seus Rendimentos Tributáveis."> &#10067; </span> 
+                  </div>
+              
+                    <p class="TEXTO-left">Quantidade de dependentes. </p>
+                        <input type="number" id="qDependentes" class="form-control-sm" placeholder="digite o número de dependentes" ><span title="Digite aqui a quantidade de dependentes de IR."> &#10067; </span> 
+                    
+                    <p class="TEXTO-left"> Previdência Oficial.</p>
+                    <input type="number" desabled id="vPrevidencia" class="form-control-sm" placeholder="valor da previdência" ><span title="Neste Campo digite o valor do INSS, valor da Previdência Própria ou a soma das 2."> &#10067; </span> 
+                      
+                    <div class="checkbox mb-4">
+                        <input type="checkbox" id="checaInss" checked> INSS Automático (para informar outras Previdências desmarque a opção).
+                    </div>
+                    <button class="btn btn-primary btn-sm px-5" type="submit">Calcula</button>
+                  </form>              
+              </form>
+              <BR>
+              <h3 id="outCalculos" class="TEXTO-calculo"></h3><BR>
+              <h3 id="outBasedeCalculo" class="TEXTO-basecalculo"></h3>
+            </div>
+
+
+
+            
+            <div class="coluna-direita">
+              <h3 class="TEXTO-parceiros">Parceiros</h3>
+
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="https://www.infomoney.com.br/">
+
+                    <img src="outros/img/slide1.jpg" class="d-block  tamanhoCarrossel" alt="...">
+                  </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="TITULO-carrossel1">InfoMoney</h5>
+                      <p class="DESC-carrossel1">Maior site especializado em mercados, investimentos e negócios do Brasil.</p>
+                    
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.xpi.com.br/">
+                    <img src="outros/img/slide2.jpg" class="d-block  tamanhoCarrossel" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="TITULO-carrossel2"></h5>
+                      <p  class="DESC-carrossel2">Um serviço diferenciado para cada faixa de investimento.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.bb.com.br/">
+                    <img src="outros/img/slide3.jpg" class="d-block  tamanhoCarrossel" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="TITULO-carrossel3">Banco do Brasil: Pra Você.</h5>
+                      <p class="DESC-carrossel3">Banco que tem serviços pensados em quem sempre está ao nosso lado.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+            </div>
+        </div>
+    
+
+
+        <footer>
+          <div id="footer_content">
+            <div id="footer_contacts">
+              <h4>Redes Sociais:</h4>
+              <p></p>
+              <div id="footer_social_media">
+                
+                <a href="https://www.instagram.com/receita_federal/" class="footer-link" target="_blank" id="instagram">
+                  <i class="fa-brands fa-square-instagram" target="_blank"></i>
+                </a>
+        
+                <a href="https://www.facebook.com/receitafederaloficial/?locale=pt_BR" target="_blank" class="footer-link" id="facebook">
+                  <i class="fa-brands fa-facebook fa-beat"></i>
+                </a>
+        
+                <a href="https://api.whatsapp.com/send?phone=554598823803" target="_blank" class="footer-link" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+        
+              </div>
+        
+            </div>
+        
+            <ul class="footer-list">
+              <li>
+                <h5>Pra Você?</h5>
+              </li>
+              <li>
+                <a href="#" class="footer-link"> Crédito Pessoal Digital</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link"> Crédito Pessoal</a>
+              </li>
+
+        
+            </ul>
+        
+            <ul class="footer-list">
+              <li>
+                <h5>Fale Com a gente</h5>
+              </li>
+              <li>
+                SAC: 
+                <a href="#" class="footer-link"> (45) 3226-2100 </a>
+              </li>
+              <li>
+                Ouvidoria: 
+                <a href="#" class="footer-link"> (45) 3226-2121</a>
+              </li>
+
+        
+            </ul>
+        
+            <div id="footer_subscribe">
+              <h5>Inscreva-se:</h5>
+                   <p>
+                  </p>
+                  <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                      <i id="btnemail" class="fa-regular fa-envelope"></i>
+                    </button>
+                  </div>
+            </div>
+        
+        
+        
+          </div>
+          <div id="footer_copyright">
+            &#169 2023 all rights reserved - Jefferson Maioli -&nbsp<a href="mailto: jmaioli@gmail.com">jmaioli@gmail.com</a>
+          </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="folha.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+        
+        
+    
+    </body>
+    </html>
