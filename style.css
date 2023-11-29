@@ -145,7 +145,11 @@ padding: 0%;
 footer {
   width: 100%;
   color: var(--color-neutral-40);
-}
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  color: #FFF;
+} 
 
 #footer_social_media .footer-link:hover{ /*:hover aplica estilo quando o cursor do mouse está sobre ele*/
   opacity: 0.5;
